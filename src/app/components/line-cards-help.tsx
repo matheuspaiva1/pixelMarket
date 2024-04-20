@@ -5,7 +5,7 @@ export default function LineCardsHelp() {
     <div>
       <h1 className="text-2xl font-bold text-gray-800 ml-11 mt-8 mb-8">Serviços para ajudar você a comprar</h1>
 
-      <div className="flex item-center justify-center gap-x-12">
+      <div className="flex item-center justify-center gap-x-12 mb-10">
         <CardsHelp/>
         <CardsHelp/>
         <CardsHelp/>

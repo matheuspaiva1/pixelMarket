@@ -27,7 +27,7 @@ export default function Filters(){
         </select>  
       </div>
 
-      <button className="ml-52 border hover:bg-zinc-50 text-teal-600  rounded-3xl p-2 font-bold ">Aplicar Filtros</button>
+      <button className="ml-48 border hover:bg-zinc-50 text-teal-600  rounded-3xl p-2 font-bold ">Aplicar Filtros</button>
 
 
     </div>

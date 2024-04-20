@@ -1,3 +1,6 @@
+import localImage from "/projetosReact/pixel-market/src/app/assets/headphones.png"
+import Image from "next/image";
+
 export default function ImageNav(){
   return (
     <div className="relative">
@@ -6,7 +9,7 @@ export default function ImageNav(){
           <button className="bg-teal-600 hover:bg-teal-700 text-zinc-100 rounded-xl p-2 mt-4 font-bold">Compre Agora</button>  
         </div>
       <div className="flex justify-center">
-        <img src="/assets/headphones.png" alt="headphones"/>
+        <Image src={localImage} alt={"imageNav"} />
       </div>  
     </div>
   )
