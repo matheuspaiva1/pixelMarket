@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Carousel } from "./components/carouselProducts";
+import Carousel  from "./components/carouselProducts";
 import DescriptionDelivery from "./components/descriptionDelivery";
 import DescriptionProduct from "./components/descriptionProduct";
 import Sales from "./components/sales";
@@ -15,17 +15,13 @@ export default function Products(){
   ]
 
   return(
-    <div>
-      <h1>Page Products</h1>
+    <div className="flex items-center justify-center gap-24 ">
 
-      <Carousel>
-        
-      </Carousel>
+
+      <Carousel/>
+
       <DescriptionProduct/>
 
-      <Sales/>
-
-      <DescriptionDelivery/>
     </div>
   )
 }
