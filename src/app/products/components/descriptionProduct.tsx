@@ -1,14 +1,30 @@
+"use client"
 import avaliacao from "/projetosReact/pixel-market/src/app/assets/avaliacao.png"
 import truck from "/projetosReact/pixel-market/src/app/assets/local_shipping_FILL0_wght400_GRAD0_opsz24.png"
 import pack from "/projetosReact/pixel-market/src/app/assets/inventory_2_FILL0_wght400_GRAD0_opsz24.png"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function DescriptionProduct(){
+  const [count, setCount] = useState<number>(0)
+
+  function addOneItem(){
+    return setCount(count + 1)
+  }
+
+  function subOneItem(){
+    if (count > 1){
+      return setCount(count - 1)
+    } else {
+      return setCount(count + 0)
+    }
+  }
+
   return (
     <div>
       <div className="mb-20">
         <h1 className="text-3xl font-bold text-zinc-700">Airpods-Max</h1>
-        <p className="text-sm font-light text-zinc-700">Um perfeito equilibrio entre uma alta  qualidade de som e um design magico da linha   Airpod</p>
+        <p className="text-sm font-light text-zinc-700">Um perfeito equilibrio entre uma alta  qualidade de som e um design magico da linha Airpod</p>
         <Image src={avaliacao} alt="avaliação" className="w-20"/>
       </div>
 
@@ -19,13 +35,31 @@ export default function DescriptionProduct(){
 
       <h3 className="text-md font-bold text-zinc-800">Escolha a Cor</h3>
       <div className="flex items-center gap-4 mb-4">
-        <input type="radio" checked /> Rosa
+        <input type="radio"/> Rosa
         <input type="radio"/> Azul
         <input type="radio"/> Preto
       </div>
 
       <div className="flex items-center gap-4 mb-8">
-        <input type="number" className="border shadow-md rounded-full px-4 w-24"/> 
+        <div className="flex items-center gap-2">
+          <button 
+          className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-4 py-2 font-bold"
+          onClick={addOneItem}
+          >
+            +
+          </button>
+          <input 
+          type="number" 
+          className="border shadow-md rounded-full pl-10 w-24 h-10"
+          value={count}
+          /> 
+          <button 
+          className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-4 py-2  font-bold"
+          onClick={subOneItem}
+          >
+            -
+          </button>
+        </div>
         <p className="text-sm font-light">Apenas <strong className=" text-teal-600">12 itens</strong> restantes</p>
       </div>
 
