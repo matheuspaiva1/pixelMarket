@@ -49,12 +49,13 @@ export default function Header() {
               <Image src={account} alt={'conta'} /> Conta{' '}
             </a>
           </div>
-          <div className="flex items-center">
-            <a href="" className="font-semibold flex items-center">
-              {' '}
-              <Image src={carr} alt={'carrinho'} /> Carrinho{' '}
-            </a>
-          </div>
+          <Link href="/cart">
+            <div className="flex items-center">
+              <div className="font-semibold flex items-center">
+                <Image src={carr} alt={'carrinho'} /> Carrinho{' '}
+              </div>
+            </div>
+          </Link>
         </div>
       </nav>
     </div>

@@ -10,10 +10,6 @@ import useEmblaCarousel from "embla-carousel-react";
 
 export default function Products(){
 
-  const images = [
-    "",
-  ]
-
   return(
     <div className="flex items-center justify-center gap-24 ">
 
