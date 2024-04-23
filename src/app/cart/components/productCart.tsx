@@ -25,7 +25,7 @@ export default function ProductCart() {
 
       <div className="flex-wrap">
         <div>
-          <h1>AirPods-Max</h1>
+          <h1 className='lg:text-2xl font-bold text-zinc-800'>AirPods-Max</h1>
           <p className="text-sm font-light">
             Apenas <strong className=" text-teal-600">12 itens</strong>{' '}
             restantes
@@ -52,7 +52,7 @@ export default function ProductCart() {
             -
           </button>
 
-          <button className='bg-yellow-500 px-2 py-1 rounded-full text-xs shadow-md text-zinc-50'>Excluir</button>
+          <button className='bg-yellow-500 lg:px-6 lg:py-3 px-2 py-1 rounded-full text-xs lg:text-sm font-semibold shadow-md text-zinc-50'>Excluir</button>
         </div>
       </div>
     </div>
