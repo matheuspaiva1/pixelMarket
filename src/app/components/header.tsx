@@ -8,54 +8,60 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <div className="text-zinc-700 ">
-      <nav className="flex items-center justify-center gap-16 my-4">
+      <nav className="lg:flex sm:inline-block items-center justify-center lg:gap-16  lg:my-4">
         <Link href="/">
-          <div className="flex items-center gap-2">
+          <div className="flex sm:flex items-center gap-2 m-4">
             <Image src={logo} alt={'logo'} className="w-10" />
             <h1 className="text-2xl font-bold text-teal-600">PixelMarket</h1>
           </div>
         </Link>
-        <select className="font-medium" name="select" value="categorias">
-          <option value="Categorias" selected>
-            Categorias
-          </option>
-        </select>
-        <a href="" className="font-medium">
-          Ofertas
-        </a>
-        <a href="" className="font-medium">
-          Novidades
-        </a>
-        <a href="" className="font-medium">
-          Delivery
-        </a>
-
-        <div className="flex items-center gap-5">
-          <div className="inline-block items-center relative">
+        <div
+          className="flex items-center gap-14 mb-4 text-xs lg:flex lg:items-center lg:gap-14 lg:justify-center lg:text-base
+        lg:mb-0 sm:gap-8"
+        >
+          <select className="font-medium " name="select" value="categorias">
+            <option value="Categorias" selected>
+              Categorias
+            </option>
+          </select>
+          <a href="" className="font-medium">
+            Ofertas
+          </a>
+          <a href="" className="font-medium">
+            Novidades
+          </a>
+          <a href="" className="font-medium">
+            Delivery
+          </a>
+        </div>
+        <div className="lg:flex items-center gap-5">
+          <div className="inline-block items-center relative lg:p-0 p-4 mb-4 lg:mb-0">
             <Image
               src={search}
               alt={'lupa'}
-              className="absolute translate-x-56"
+              className="absolute translate-x-80 py-4 lg:py-2 w-8 lg:w-5 lg:py-0 lg:translate-x-56 "
             />{' '}
             <input
               type="text"
               placeholder="Pesquisar Produtos"
-              className="w-64 px-4 bg-zinc-50 border-1 rounded-3xl"
+              className="w-96  h-16 rounded-full lg:h-10 lg:w-64 px-8 lg:px-4 bg-zinc-50 border shadow-md lg:rounded-3xl"
             />
           </div>
-          <div className="">
-            <a href="" className="font-semibold flex items-center">
-              {' '}
-              <Image src={account} alt={'conta'} /> Conta{' '}
-            </a>
-          </div>
-          <Link href="/cart">
-            <div className="flex items-center">
-              <div className="font-semibold flex items-center">
-                <Image src={carr} alt={'carrinho'} /> Carrinho{' '}
-              </div>
+          <div className="flex items-center justify-center gap-56 lg:gap-2 mb-4 lg:mb-0">
+            <div className="">
+              <a href="" className="font-semibold flex items-center">
+                {' '}
+                <Image src={account} alt={'conta'} /> Conta{' '}
+              </a>
             </div>
-          </Link>
+            <Link href="/cart">
+              <div className="flex items-center">
+                <div className="font-semibold flex items-center">
+                  <Image src={carr} alt={'carrinho'} /> Carrinho{' '}
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </nav>
     </div>

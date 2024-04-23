@@ -1,8 +1,11 @@
-export default function Cart(){
+import Orders from "./components/orders";
+import ProductCart from "./components/productCart";
 
+export default function Cart(){
   return (
     <div>
-      pagina carrinho de compras
+      <ProductCart/>
+      <Orders/>
     </div>
-  )
-}
+  );
+};
