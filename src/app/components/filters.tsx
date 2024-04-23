@@ -1,7 +1,7 @@
 export default function Filters(){
   return(
-    <div className="flex items-center justify-start  gap-72 ml-10  mt-8">
-      <div className="selects flex gap-x-9">
+    <div className="lg:flex lg:items-center justify-start lg:gap-72 lg:ml-10 mt-8">
+      <div className="grid grid-cols-3 lg:flex  gap-4 lg:gap-x-9">
         <select name="select" value="Headphones" className=" text-xs bg-zinc-100 text-zinc-600 rounded-3xl p-2 font-bold ">
           <option value="Headphones" selected>Headphones</option>
         </select>
@@ -27,7 +27,7 @@ export default function Filters(){
         </select>  
       </div>
 
-      <button className="ml-48 border hover:bg-zinc-50 text-teal-600  rounded-3xl p-2 font-bold ">Aplicar Filtros</button>
+      <button className="lg:ml-48 ml-3 border hover:bg-zinc-50 text-teal-600  rounded-3xl p-2 font-bold mt-6 lg:mt-0 ">Aplicar Filtros</button>
 
 
     </div>
