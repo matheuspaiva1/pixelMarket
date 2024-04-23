@@ -19,9 +19,9 @@ export default function ProductCart() {
   }
 
   return (
-    <div className="flex items-center justify-start border gap-10">
+    <div className="flex items-center justify-start mb-6 gap-10">
       <input type="radio" className="ml-4" />
-      <Image src={airpodsCart} alt="airpods" className="w-40 rounded-md" />
+      <Image src={airpodsCart} alt="airpods" className="w-20 lg:w-40 rounded-md" />
 
       <div className="flex-wrap">
         <div>
@@ -33,9 +33,9 @@ export default function ProductCart() {
           <p className="text-sm font-light">Frete Grátis</p>
         </div>
 
-        <div className="">
+        <div className="mt-4 flex items-center gap-2">
           <button
-            className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-4 py-2 font-bold"
+            className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-2 py-1 lg:px-4 lg:py-2 font-bold"
             onClick={addOneItem}
           >
             +
@@ -46,13 +46,13 @@ export default function ProductCart() {
             value={count}
           />
           <button
-            className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-4 py-2  font-bold"
+            className="border shadow-md hover:bg-zinc-100 text-teal-600 rounded-full px-2 py-1 lg:px-4 lg:py-2  font-bold"
             onClick={subOneItem}
           >
             -
           </button>
 
-          <button>Excluir</button>
+          <button className='bg-yellow-500 px-2 py-1 rounded-full text-xs shadow-md text-zinc-50'>Excluir</button>
         </div>
       </div>
     </div>
