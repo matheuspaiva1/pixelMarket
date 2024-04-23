@@ -21,9 +21,9 @@ export default function DescriptionProduct(){
   }
 
   return (
-    <div>
-      <div className="mb-20">
-        <h1 className="text-3xl font-bold text-zinc-700">Airpods-Max</h1>
+    <div className="ml-2 lg:ml-0">
+      <div className="mb-10 lg:mb-20 ">
+        <h1 className="text-3xl   font-bold text-zinc-700">Airpods-Max</h1>
         <p className="text-sm font-light text-zinc-700">Um perfeito equilibrio entre uma alta  qualidade de som e um design magico da linha Airpod</p>
         <Image src={avaliacao} alt="avaliação" className="w-20"/>
       </div>
@@ -63,7 +63,7 @@ export default function DescriptionProduct(){
         <p className="text-sm font-light">Apenas <strong className=" text-teal-600">12 itens</strong> restantes</p>
       </div>
 
-      <div className="gap-8">
+      <div className="gap-10 flex items-center lg:gap-8">
         <a href=""><button className="bg-teal-600 border hover:bg-teal-700 text-zinc-100 rounded-full p-4 shadow-md font-bold mr-4">Compre Agora</button></a> 
         <a href=""><button className="border shadow-md border-spacing-4 hover:bg-zinc-100 text-teal-600 rounded-full p-4 font-bold">Adicione ao carrinho</button></a>
       </div>
@@ -75,7 +75,7 @@ export default function DescriptionProduct(){
         <strong className="text-sm font-light text-zinc-950">Entrega Grátis</strong>
       </div>
 
-      <div className="flex items-center gap-2 mt-2">
+      <div className="flex items-center gap-2 mt-2 mb-10 lg:mb-0">
         <Image src={pack} alt="pack"/>
         <strong className="text-sm font-light text-zinc-950">Retorno de Entrega</strong>
       </div>

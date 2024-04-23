@@ -11,7 +11,7 @@ import useEmblaCarousel from "embla-carousel-react";
 export default function Products(){
 
   return(
-    <div className="flex items-center justify-center gap-24 ">
+    <div className="lg:flex lg:items-center lg:justify-center lg:gap-24 ">
 
 
       <Carousel/>

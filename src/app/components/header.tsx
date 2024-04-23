@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <div className="text-zinc-700 ">
+    <div className="text-zinc-700">
       <nav className="lg:flex sm:inline-block items-center justify-center lg:gap-16  lg:my-4">
         <Link href="/">
           <div className="flex sm:flex items-center gap-2 m-4">
@@ -47,7 +47,7 @@ export default function Header() {
               className="w-96  h-16 rounded-full lg:h-10 lg:w-64 px-8 lg:px-4 bg-zinc-50 border shadow-md lg:rounded-3xl"
             />
           </div>
-          <div className="flex items-center justify-center gap-56 lg:gap-2 mb-4 lg:mb-0">
+          <div className="flex items-center justify-center gap-56 lg:gap-2 mb-10 lg:mb-0">
             <div className="">
               <a href="" className="font-semibold flex items-center">
                 {' '}

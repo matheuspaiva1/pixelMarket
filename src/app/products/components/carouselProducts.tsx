@@ -18,7 +18,7 @@ function SimpleSlider() {
   };
   return (
     <div className="slider-container ">
-      <Slider {...settings} className='w-96'>
+      <Slider {...settings} className='w-60 mb-10 ml-20 lg:mb-0 lg:w-96'>
           <Image src={airpodsRosa} alt="airpodsRosa" />
           <Image src={airpodsAzul} alt="airpodsAzul"/>
           <Image src={airpodsPreto} alt="airpodsPreto"/>
