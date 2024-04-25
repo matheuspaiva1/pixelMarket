@@ -1,5 +1,5 @@
 import logo from '/projetosReact/pixel-market/src/app/assets/carrinho-de-compras.png'
-import account from '/projetosReact/pixel-market/src/app/assets/person_FILL0_wght400_GRAD0_opsz24.png'
+import avaliable from '/projetosReact/pixel-market/src/app/assets/favorite_FILL0_wght400_GRAD0_opsz24.png'
 import carr from '/projetosReact/pixel-market/src/app/assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.png'
 import search from '/projetosReact/pixel-market/src/app/assets/search_FILL0_wght400_GRAD0_opsz24.png'
 import Image from 'next/image'
@@ -10,13 +10,13 @@ export default function Header() {
     <div className="text-zinc-700">
       <nav className="lg:flex sm:inline-block items-center justify-center lg:gap-16  lg:my-4">
         <Link href="/">
-          <div className="flex sm:flex items-center gap-2 m-4">
+          <div className="flex sm:flex items-center gap-3 m-4">
             <Image src={logo} alt={'logo'} className="w-10" />
             <h1 className="text-2xl font-bold text-teal-600">PixelMarket</h1>
           </div>
         </Link>
         <div
-          className="flex items-center gap-14 mb-4 text-xs lg:flex lg:items-center lg:gap-14 lg:justify-center lg:text-base
+        className="flex items-center gap-14 mb-4 text-xs lg:flex lg:items-center lg:gap-9 lg:justify-center lg:text-base
         lg:mb-0 sm:gap-8"
         >
           <select className="font-medium " name="select" value="categorias">
@@ -25,10 +25,10 @@ export default function Header() {
             </option>
           </select>
           <a href="" className="font-medium">
-            Ofertas
+            Quem Somos
           </a>
           <a href="" className="font-medium">
-            Novidades
+            Parceiros
           </a>
           <a href="" className="font-medium">
             Delivery
@@ -51,7 +51,7 @@ export default function Header() {
             <div className="">
               <a href="" className="font-semibold flex items-center">
                 {' '}
-                <Image src={account} alt={'conta'} /> Conta{' '}
+                <Image src={avaliable} alt={'favorite'} /> Favoritos{' '}
               </a>
             </div>
             <Link href="/cart">

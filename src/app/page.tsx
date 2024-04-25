@@ -11,9 +11,7 @@ import LineCardsView from "./components/line-cards-view";
 export default function Home() {
   return (
     <div> 
-      <ImageNav/>
-      <Filters/>
-      
+      <ImageNav/>      
       
       <h1 className="text-2xl font-bold text-gray-800 ml-4 lg:ml-11 mt-8 mb-8 ">Aqui estão alguns Headphones para você!</h1>
       <LineCardsSearch/>
