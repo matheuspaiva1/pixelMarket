@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import airpodsCart from '/projetosReact/pixel-market/src/app/assets/airpodsCart.png'
 import { useState } from 'react'
+import { BsCartDashFill } from "react-icons/bs";
+
 
 export default function ProductCart() {
   const [count, setCount] = useState<number>(0)
@@ -52,7 +54,12 @@ export default function ProductCart() {
             -
           </button>
 
-          <button className='bg-yellow-500 lg:px-6 lg:py-3 px-2 py-1 rounded-full text-xs lg:text-sm font-semibold shadow-md text-zinc-50'>Excluir</button>
+          <button
+          type="button"
+          className="border  shadow-md p-2 rounded-full hover:bg-zinc-50"
+        >
+          <BsCartDashFill className='text-red-500'/>
+        </button>
         </div>
       </div>
     </div>

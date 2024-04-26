@@ -1,11 +1,5 @@
-import Link  from "next/link";
-import Filters from "./components/filters";
-import Header from "./components/header";
 import ImageNav from "./components/image-nav";
-import LineCardsHelp from "./components/line-cards-help";
-import LineCardsPopular from "./components/line-cards-popular";
 import LineCardsSearch from "./components/line-cards-search";
-import LineCardsView from "./components/line-cards-view";
 
 
 export default function Home() {
@@ -17,12 +11,6 @@ export default function Home() {
       <LineCardsSearch/>
       <LineCardsSearch/>
       <LineCardsSearch/>
-
-      <LineCardsPopular/>
-
-      <LineCardsView/>
-
-      <LineCardsHelp/>
       
     </div>
   );
