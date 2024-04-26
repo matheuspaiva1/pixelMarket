@@ -1,12 +1,32 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import Image from 'next/image'
 import airpodsCart from '/projetosReact/pixel-market/src/app/assets/airpodsCart.png'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { BsCartDashFill } from "react-icons/bs";
+import AppContext from '@/app/contexts/appContext';
+import currencyPrice from '@/app/utils/currencyPrice';
+import Link from 'next/link';
 
+interface DataPropsTypes{
+  data: any;
+}
 
-export default function ProductCart() {
-  const [count, setCount] = useState<number>(0)
+export default function ProductCart({data}: DataPropsTypes) {
+  const [count, setCount] = useState<number>(0);
+
+  const{title, thumbnail, price, id} = data;
+
+  const {cartItems, setCartItems} = useContext(AppContext)
+
+  const handleRemoveItem = () => {
+    const updateItems = cartItems.filter((item: { id: any; }) => item.id !== id)
+    setCartItems(updateItems)
+  }
+
+ 
+
+ 
 
   function addOneItem() {
     return setCount(count + 1)
@@ -23,15 +43,12 @@ export default function ProductCart() {
   return (
     <div className="flex items-center justify-start mb-6 gap-10">
       <input type="radio" className="ml-4" />
-      <Image src={airpodsCart} alt="airpods" className="w-20 lg:w-40 rounded-md" />
+      <img src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt="produto" className="w-20 lg:w-40 rounded-md" />
 
       <div className="flex-wrap">
         <div>
-          <h1 className='lg:text-2xl font-bold text-zinc-800'>AirPods-Max</h1>
-          <p className="text-sm font-light">
-            Apenas <strong className=" text-teal-600">12 itens</strong>{' '}
-            restantes
-          </p>
+          <h1 className="lg:text-2xl font-bold text-zinc-800">{title}</h1>
+          <p className="text-sm font-light">{currencyPrice(price, 'BRL')}</p>
           <p className="text-sm font-light">Frete Grátis</p>
         </div>
 
@@ -55,11 +72,20 @@ export default function ProductCart() {
           </button>
 
           <button
-          type="button"
-          className="border  shadow-md p-2 rounded-full hover:bg-zinc-50"
-        >
-          <BsCartDashFill className='text-red-500'/>
-        </button>
+            type="button"
+            className="border  shadow-md p-2 rounded-full hover:bg-zinc-50"
+            onClick={handleRemoveItem}
+          >
+            <BsCartDashFill className="text-red-500" />
+          </button>
+          <Link href="/products">
+            <button
+              type="button"
+              className="border shadow-md p-2 rounded-full bg-teal-600 text-zinc-50 hover:bg-teal-500 font-semibold"
+            >
+              Buy Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
