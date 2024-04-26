@@ -49,10 +49,10 @@ export default function Header() {
           </div>
           <div className="flex items-center justify-center gap-56 lg:gap-2 mb-10 lg:mb-0">
             <div className="">
-              <a href="" className="font-semibold flex items-center">
+              <Link href="/favorites" className="font-semibold flex items-center">
                 {' '}
                 <Image src={avaliable} alt={'favorite'} /> Favoritos{' '}
-              </a>
+              </Link>
             </div>
             <Link href="/cart">
               <div className="flex items-center">
