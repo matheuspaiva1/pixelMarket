@@ -4,10 +4,11 @@ import avaliacao from '/projetosReact/pixel-market/src/app/assets/avaliacao.png'
 import truck from '/projetosReact/pixel-market/src/app/assets/local_shipping_FILL0_wght400_GRAD0_opsz24.png'
 import pack from '/projetosReact/pixel-market/src/app/assets/inventory_2_FILL0_wght400_GRAD0_opsz24.png'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { FaCartPlus } from 'react-icons/fa'
 import { MdFavorite } from 'react-icons/md'
 import currencyPrice from '@/app/utils/currencyPrice'
+import AppContext from '@/app/contexts/appContext'
 
 interface DataPropsTypes {
   data: any;
@@ -17,6 +18,10 @@ export default function DescriptionProduct({data}: DataPropsTypes) {
   const [count, setCount] = useState<number>(0)
 
   const {thumbnail, title, price} = data
+
+  const {addProducts, setAddProducts} = useContext(AppContext)
+
+  
 
   function addOneItem() {
     return setCount(count + 1)

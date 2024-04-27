@@ -3,30 +3,29 @@
 import Image from 'next/image'
 import airpodsCart from '/projetosReact/pixel-market/src/app/assets/airpodsCart.png'
 import { useContext, useState } from 'react'
-import { BsCartDashFill } from "react-icons/bs";
-import AppContext from '@/app/contexts/appContext';
-import currencyPrice from '@/app/utils/currencyPrice';
-import Link from 'next/link';
+import { BsCartDashFill } from 'react-icons/bs'
+import AppContext from '@/app/contexts/appContext'
+import currencyPrice from '@/app/utils/currencyPrice'
+import Link from 'next/link'
 
-interface DataPropsTypes{
-  data: any;
+interface DataPropsTypes {
+  data: any
 }
 
-export default function ProductCart({data}: DataPropsTypes) {
-  const [count, setCount] = useState<number>(0);
+export default function ProductCart({ data }: DataPropsTypes) {
+  const [count, setCount] = useState<number>(0)
 
-  const{title, thumbnail, price, id} = data;
+  const { title, thumbnail, price, id } = data
 
-  const {cartItems, setCartItems} = useContext(AppContext)
+  const { cartItems, setCartItems, addProducts, setAddProducts } =
+    useContext(AppContext)
+
+  const handleAddProducts = () => setAddProducts([...addProducts, data])
 
   const handleRemoveItem = () => {
-    const updateItems = cartItems.filter((item: { id: any; }) => item.id !== id)
+    const updateItems = cartItems.filter((item: { id: any }) => item.id !== id)
     setCartItems(updateItems)
   }
-
- 
-
- 
 
   function addOneItem() {
     return setCount(count + 1)
@@ -43,7 +42,11 @@ export default function ProductCart({data}: DataPropsTypes) {
   return (
     <div className="flex items-center justify-start mb-6 gap-10">
       <input type="radio" className="ml-4" />
-      <img src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt="produto" className="w-20 lg:w-40 rounded-md" />
+      <img
+        src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
+        alt="produto"
+        className="w-20 lg:w-40 rounded-md"
+      />
 
       <div className="flex-wrap">
         <div>
@@ -80,13 +83,14 @@ export default function ProductCart({data}: DataPropsTypes) {
           </button>
         </div>
         <Link href="/products">
-            <button
-              type="button"
-              className="border shadow-md p-2 rounded-full bg-teal-600 text-zinc-50 hover:bg-teal-500 font-semibold mt-4"
-            >
-              Buy Now
-            </button>
-          </Link>
+          <button
+            type="button"
+            className="border shadow-md p-2 rounded-full bg-teal-600 text-zinc-50 hover:bg-teal-500 font-semibold mt-4"
+            onClick={handleAddProducts}
+          >
+            Buy Now
+          </button>
+        </Link>
       </div>
     </div>
   )

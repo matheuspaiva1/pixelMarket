@@ -12,14 +12,13 @@ import AppContext from "../contexts/appContext";
 
 
 export default function Products(){
-  const {cartItems} = useContext(AppContext)
+  const {addProducts} = useContext(AppContext)
 
   return(
-    <div className="lg:flex lg:items-center lg:justify-center lg:gap-24 ">
+    <div className="">
       
       {
-        cartItems.map((item: { id: Key | null | undefined; }) => <DescriptionProduct key={item.id} data={item}/>)
-
+        addProducts.map((item: { id: Key | null | undefined; }) => <DescriptionProduct key={item.id} data={item}/>)
       }
 
     </div>

@@ -13,6 +13,8 @@ export default function Provider({children}:ProviderProps){
 
   const [favoriteItems, setFavoriteItems] = useState<any>([])
 
+  const [addProducts, setAddProducts] = useState<any>([])
+
   const value = {
     products,
     setProducts,
@@ -20,6 +22,8 @@ export default function Provider({children}:ProviderProps){
     setCartItems,
     favoriteItems,
     setFavoriteItems,
+    addProducts,
+    setAddProducts,
   }
 
   return (
