@@ -1,4 +1,4 @@
-import localImage from "/projetosReact/pixel-market/src/app/assets/headphones.png"
+import localImage from "/src/app/assets/headphones.png"
 import Image from "next/image";
 
 export default function ImageNav(){
