@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import info from '/projetosReact/pixel-market/src/app/assets/info_FILL0_wght400_GRAD0_opsz24.png'
+import info from '/assets/info_FILL0_wght400_GRAD0_opsz24.png'
 import { useContext } from 'react';
 import AppContext from '@/app/contexts/appContext';
 import currencyPrice  from "@/app/utils/currencyPrice";
