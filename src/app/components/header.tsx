@@ -54,13 +54,13 @@ export default function Header() {
           </a>
         </div>
         <div className="lg:flex items-center gap-5">
-          <div className="inline-block items-center relative lg:p-0 p-4 mb-4 lg:mb-0">
+          <div className="items-center relative lg:p-0 p-4 mb-4 lg:mb-0">
             <form onSubmit={handleSearch}>
               <button type="submit" >
                 <Image
                   src={searchLupe}
                   alt={'lupa'}
-                  className=" translate-x-80 py-4 lg:py-0 w-8 lg:w-5 lg:translate-x-60 "
+                  className="translate-x-80 translate-y-12 lg:translate-y-0 py-0 lg:py-0 w-8 lg:w-5 lg:translate-x-60 "
                 />{' '}
               </button>
               <input

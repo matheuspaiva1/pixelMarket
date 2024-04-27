@@ -16,9 +16,12 @@ interface DataPropsTypes{
 export default function CardSearch({data}: DataPropsTypes) {
   const {thumbnail, title, price} = data;
 
-  const {cartItems, setCartItems} = useContext(AppContext)
+  const {cartItems, setCartItems, favoriteItems, setFavoriteItems} = useContext(AppContext)
   
   const handleAddCart = () => setCartItems([...cartItems, data])
+
+  const handleAddFavorites = () => setFavoriteItems([...favoriteItems, data])
+
   
   return (
     <div className="mb-4">
@@ -43,6 +46,7 @@ export default function CardSearch({data}: DataPropsTypes) {
         <button
           type="button"
           className="border shadow-md p-2 rounded-full hover:bg-zinc-50"
+          onClick={handleAddFavorites}
         >
           <MdFavorite className='text-teal-600' />
         </button>{' '}

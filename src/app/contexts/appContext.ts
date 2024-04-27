@@ -6,6 +6,8 @@ interface ProviderContextType {
   setProducts: React.Dispatch<React.SetStateAction<any>>;
   cartItems: any;
   setCartItems: React.Dispatch<React.SetStateAction<any>>;
+  favoriteItems: any;
+  setfavoriteItems: React.Dispatch<React.SetStateAction<any>>;
 }
 
 const AppContext = createContext<ProviderContextType | any>(undefined);
