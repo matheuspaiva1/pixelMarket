@@ -79,12 +79,6 @@ export default function DescriptionProduct({data}: DataPropsTypes) {
           </a>
           <button
             type="button"
-            className="border  shadow-md p-2 rounded-full hover:bg-zinc-50"
-          >
-            <FaCartPlus className="text-yellow-500" />
-          </button>
-          <button
-            type="button"
             className="border shadow-md p-2 rounded-full hover:bg-zinc-50"
           >
             <MdFavorite className="text-teal-600" />

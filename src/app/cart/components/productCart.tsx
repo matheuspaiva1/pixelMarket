@@ -78,15 +78,15 @@ export default function ProductCart({data}: DataPropsTypes) {
           >
             <BsCartDashFill className="text-red-500" />
           </button>
-          <Link href="/products">
+        </div>
+        <Link href="/products">
             <button
               type="button"
-              className="border shadow-md p-2 rounded-full bg-teal-600 text-zinc-50 hover:bg-teal-500 font-semibold"
+              className="border shadow-md p-2 rounded-full bg-teal-600 text-zinc-50 hover:bg-teal-500 font-semibold mt-4"
             >
               Buy Now
             </button>
           </Link>
-        </div>
       </div>
     </div>
   )
