@@ -26,7 +26,7 @@ export default function ItemsFavorites({data}: dataPropTypes) {
 
   return (
     <div className="flex items-center justify-start mb-6 gap-10">
-      <img src={thumbnail} alt="airpods" className="w-20 lg:w-40 rounded-md ml-8" />
+      <img src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')} alt="airpods" className="w-20 lg:w-40 rounded-md ml-8" />
 
       <div className="flex-wrap">
         <div>
@@ -42,14 +42,14 @@ export default function ItemsFavorites({data}: dataPropTypes) {
           type="button" 
           className="border  shadow-md p-2 rounded-full hover:bg-zinc-50" 
           onClick={handleAddCart}>
-            <FaCartPlus />
+            <FaCartPlus className='text-teal-600'/>
           </button>
 
           <button 
           type="button" 
           className="border shadow-md p-2 rounded-full hover:bg-zinc-50" 
           onClick={handleRemoveFavorite}>
-            <FaHeartCircleMinus />
+            <FaHeartCircleMinus className='text-red-600'/>
           </button>
         </div>
       </div>
