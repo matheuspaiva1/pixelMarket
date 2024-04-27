@@ -1,11 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import avaliacao from '/projetosReact/pixel-market/src/app/assets/avaliacao.png'
-import truck from '/projetosReact/pixel-market/src/app/assets/local_shipping_FILL0_wght400_GRAD0_opsz24.png'
-import pack from '/projetosReact/pixel-market/src/app/assets/inventory_2_FILL0_wght400_GRAD0_opsz24.png'
+import truck from '/src/app/assets/local_shipping_FILL0_wght400_GRAD0_opsz24.png'
+import pack from '/src/app/assets/inventory_2_FILL0_wght400_GRAD0_opsz24.png'
 import Image from 'next/image'
 import { useContext, useState } from 'react'
-import { FaCartPlus } from 'react-icons/fa'
 import { MdFavorite } from 'react-icons/md'
 import currencyPrice from '@/app/utils/currencyPrice'
 import AppContext from '@/app/contexts/appContext'

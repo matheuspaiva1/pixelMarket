@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
-import logo from '/projetosReact/pixel-market/src/app/assets/carrinho-de-compras.png'
-import avaliable from '/projetosReact/pixel-market/src/app/assets/favorite_FILL0_wght400_GRAD0_opsz24.png'
-import carr from '/projetosReact/pixel-market/src/app/assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.png'
+import logo from '/src/app/assets/carrinho-de-compras.png'
+import avaliable from '/src/app/assets/favorite_FILL0_wght400_GRAD0_opsz24.png'
+import carr from '/src/app/assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useContext, useState } from 'react'
 import { fetchProducts } from '../apis/fetchProducts'
 import AppContext from '../contexts/appContext'
-import searchLupe from '/projetosReact/pixel-market/src/app/assets/search_FILL0_wght400_GRAD0_opsz24.png'
+import searchLupe from '/src/app/assets/search_FILL0_wght400_GRAD0_opsz24.png'
  
 
 export default function Header() {
