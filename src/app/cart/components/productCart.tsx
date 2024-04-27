@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import Image from 'next/image'
-import airpodsCart from '/projetosReact/pixel-market/src/app/assets/airpodsCart.png'
 import { useContext, useState } from 'react'
 import { BsCartDashFill } from 'react-icons/bs'
 import AppContext from '@/app/contexts/appContext'
